@@ -32,7 +32,7 @@
 
 # Run
 
-``` python summarize_text.py folder_with_books ```
+``` python quote_finder.py folder/with/excel ```
 
 ``````
 
