@@ -215,11 +215,15 @@ class Summarizer:
         return resultados
 
 def main():
-    backstory_strength = "strong" #none/weak/detailed
+    arg_parser = argparse.ArgumentParser(description='Finds quotes in a dataset of news articles')
+    arg_parser.add_argument('book_folderpath', help='The path to the folder that contains the EXCEL')
+    arg_parser.add_argument('--backstory_strength', default='strong', help='How strongly the the previous context should be tracked (none/weak/strong)')
+    args = arg_parser.parse_args()
+    book_folderpath = args.book_folderpath
+    backstory_strength = args.backstory_strength
     book_summarizer = Summarizer(backstory_strength)
-    excel = "/home/diego/FINAL.xlsx"
     excel = pd.read_excel(excel, sheet_name="Texto")
-    for text in excel["text"][0:6]:
+    for text in excel["text"]:
       condensed_text = book_summarizer.summarize(text)
       print(condensed_text)
 
