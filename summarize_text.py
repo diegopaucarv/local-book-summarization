@@ -20,7 +20,7 @@ class Summarizer:
         self.ollama_options = {
             'num_ctx': self.model_token_limit,
             'temperature': 0.0,
-            'num_predict': 512,
+            'num_predict': 3840,
             'top_k': 20,
             'top_p': 0.5
         }
