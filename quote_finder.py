@@ -219,7 +219,7 @@ def main():
     arg_parser.add_argument('book_folderpath', help='The path to the folder that contains the EXCEL')
     arg_parser.add_argument('--backstory_strength', default='strong', help='How strongly the the previous context should be tracked (none/weak/strong)')
     args = arg_parser.parse_args()
-    book_folderpath = args.book_folderpath
+    excel = args.book_folderpath
     backstory_strength = args.backstory_strength
     book_summarizer = Summarizer(backstory_strength)
     excel = pd.read_excel(excel, sheet_name="Texto")
