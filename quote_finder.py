@@ -31,7 +31,7 @@ class Summarizer:
         {full_text}
         --- End of text section ---
 
-        Response format: english, extract direct quotes and intertextual references in the text followed by the entity referenced in parentheses, separate each reference or quote with /n.
+        Response format: english, extract direct quotes and intertextual references in the text followed by a one-sentence description of the entity referenced in parentheses, separate each reference or quote with /n.
         Quotes and references in the text:
 
         """
